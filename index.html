@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
+<body class="" ng-controller="validateCtrl">
+
+    <div class="uk-container uk-padding-large uk-flex uk-flex-middle" uk-height-viewport="expand: true;">
+
+        <div class="uk-width-large uk-align-center">
+
+                <p class="uk-text-center" ng-bind="error"></p>
+      
+            <div class="uk-card">
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title uk-text-center uk-margin-medium-bottom">LOGIN</h3>
+                    <form id="login_form" class="login-form" name="loginForm" method="post">
+                        <div class="uk-margin">
+                            <div class="uk-inline line100 uk-width-1-1 uk-form-width-medium">
+                                <span id="usercheck" class="uk-form-icon uk-form-icon-flip" uk-icon="icon:user"></span>
+                                <input class="uk-input inputbox"
+                                       name="username"
+                                       id="username"
+                                       ng-model="username"
+                                       type="text"
+                                       title="Enter your username"
+                                       uk-tooltip="pos: top-right" required="required" />
+                                <span class="focus-input100" data-placeholder="Username"></span>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline line100 uk-width-1-1 uk-form-width-medium">
+                                <span id="passcheck" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                                <input id="password"
+                                       class="uk-input password inputbox"
+                                       name="password"
+                                       ng-model="password"
+                                       type="password"
+                                       title="Enter your password"
+                                       uk-tooltip="pos: top-right" required="required" />
+                                <span class="focus-input100" data-placeholder="Password"></span>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label>
+                                <input class="uk-checkbox uk-margin-small-right" id="rememberme" name="rememberme" type="checkbox" uk-tooltip="pos: left"
+                                       title="Click here to remember your username & password" /> Keep me signed in
+                            </label>
+                        </div>
+                        <div class="uk-margin">
+                            <a>
+                                <input type="submit" class="uk-input uk-button-primary" ng-click="formSubmit()" ng-disabled="loginForm.$invalid" value="Login" />
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <script src="js/loginForm.js"></script>
+</body>
+</html>
