@@ -3,7 +3,7 @@ app.controller('validateCtrl', function ($scope, $window) {
 
     $scope.formSubmit = function () {
        
-        if (($scope.username == "Queen") && ($scope.password == "123456")) {
+        if (($scope.username == "Test") && ($scope.password == "password")) {
             $window.location.href = 'home.html';
         }
         else {
